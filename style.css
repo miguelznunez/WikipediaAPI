@@ -55,8 +55,13 @@ a{
   right: 4%;
   position: absolute;
   font-size: 1.8rem;
-  color: white;
+  transition: 0.3s ease-out;
+  color: rgba(211, 211, 211, 0.3);
   cursor: pointer;
+}
+
+.search-input .fa-magnifying-glass:hover{
+  color: white;
 }
 
 ::placeholder{
