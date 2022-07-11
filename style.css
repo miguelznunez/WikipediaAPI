@@ -5,31 +5,58 @@
 }
 
 body{
-  /* background-image: linear-gradient(to right, #031734, #362258, #761f6a, #b70164, #eb1247); */
   background-image: linear-gradient(to right, #83be36, #b77e00, #c5201f, #a00058, #190084);
   font-family: 'Spartan', sans-serif;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
 
-.container{
+.app{
   width: 90%;
   margin: auto;
   min-height: 100vh;
+  padding: 50px 0;
 }
 
-.search{
-  padding-top: 30px;
-  text-align: center;
+.search-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.search input{
+.search-wrapper span {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.search-input{
+  width: 600px;
+  position: relative;
+}
+
+.search-input input{
   border: none;
   outline: none;
-  width: 500px;
+  width: 100%;
   color: white;
   font-size: 2.5rem;
-  text-align: center;
+  padding: 12px 65px 12px 12px;
   background-color: transparent;
-  border-bottom: 5px solid rgba(211, 211, 211, 0.3);
+  border-radius: 10px;
+  border: 5px solid rgba(211, 211, 211, 0.3);
+}
+
+.search-input .fa-magnifying-glass{
+  top: 30%;
+  right: 4%;
+  position: absolute;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
 }
 
 ::placeholder{
@@ -37,22 +64,20 @@ body{
   font-size: 2.5rem;
 }
 
-.wikilinks{
-  margin-top: 25px;
+#wikilinks{
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 15px;
 }
 
 .link{
   width: 550px;
   height: auto;
-  padding: 0 10px;
-  margin-top: 10px;
-  border-radius: 2px;
+  padding: 10px;
+  border-radius: 5px;
   cursor: pointer;
   display: flex;
   transition: 2s;
@@ -106,24 +131,27 @@ body{
   opacity: 1;
 }
 
+
 @media(max-width:768px){
-  .search input{
+  .search-input{
     width: 100%;
-    font-size: 2rem;
+  }
+
+  .search-input .fa-magnifying-glass {
+    right: 6%;
   }
 
   ::placeholder{
     color: rgba(211, 211, 211, 0.3);
-   font-size: 2rem;
+  }
+
+  .link {
+    width: 100%;
   }
 
   .link h3{
     font-size: 0.8rem;
     font-weight: bold;
-  }
-
-  .link{
-    width: 100%;
   }
 
   .middle i{
@@ -132,14 +160,12 @@ body{
 }
 
 @media(max-width:480px){
-  .search input{
-    width: 100%;
-    font-size: 1.5rem;
+  .search-input .fa-magnifying-glass {
+    right: 8%;
   }
 
   ::placeholder{
     color: rgba(211, 211, 211, 0.3);
-    font-size: 1.5rem;
   }
 
   .middle i{
