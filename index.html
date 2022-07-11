@@ -10,12 +10,16 @@
 </head>
 <body>
   
-  <div class="container">
-    <div class="search">
-      <input id="input" type="text" placeholder="Search Wikipedia...">
+  <main class="app">
+    <div class="search-wrapper">
+      <div class="search-input">
+        <input id="search" type="text" placeholder="Search Wikipedia...">
+        <i id="search-button" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <span id="error"></span>
     </div>
-    <div class="wikilinks"></div>
-  </div>
+    <div id="wikilinks"></div>
+  </main>
   
   <script src="script.js"></script>
 </body>
